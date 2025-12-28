@@ -1,21 +1,31 @@
-# Checkout Pro with ReactJS example
+# Checkout payment processing with Checkout Pro
 
-## Requirements
+## This is a simple example of how you can accept payments by integrating our [Checkout PRO](https://www.mercadopago.com/developers/en/guides/online-payments/checkout-pro/introduction)
 
-- Node v10 or higher
-- Read our [testing instructions](https://www.mercadopago.com/developers/en/guides/online-payments/checkout-pro/test-integration)
-- Setup your credentials and variables:
-  - `PUBLIC_KEY` and `YOUR_LOCALE` on client-side and locale `App.js`
-  - Private `ACCESS_TOKEN` on server-side `server.js`
+### In this repository you will find two main folders:
 
-## Development
+- `client`:
+  Basic implementation of a checkout, complying with the necessary security requirements to collect sensitive user information.
 
-1. In a terminal inside `client/reactjs`, install dependencies running `npm install`
-2. Start a local web server by running `npm run start`
-3. In other terminal, inside `server/node`, install dependencies running `npm install`
-4. Start it by running: `npm run start`
-5. Open [http://localhost:3000](http://localhost:3000/) to view it in the browser
+  For html/js project: http://localhost:8080
 
-## Documentation
+  For reactjs project: http://localhost:3000
 
-Check out the [documentation](https://www.mercadopago.com/developers/en/docs/checkout-pro/integrate-checkout-pro/web) that explains the integration process and the possible settings for the payment button.
+- `server`:
+  Basic server-side implementation, which provides static client-side resources and allows the collected information to be published directly to our API to create preference and process payment request using our payment button. Hosted on http://localhost:8080.
+
+<br>
+
+## How to run it
+
+Clone or [download](https://github.com/mercadopago/checkout-payment-sample/archive/master.zip) this project, **move to the server implementation** of your choice and **follow its README** instructions.
+
+If you are programming in a different language, we offer a client-side sample which will allow you to write your own server-side implementation using our [API Reference](https://www.mercadopago.com/developers/en/reference/preferences/_checkout_preferences/post/) as a guideline.
+
+## How it looks
+
+https://github.com/user-attachments/assets/f7defe58-d2c9-4761-9c1e-f923f7cb4311
+
+The payment button is currently in a migration process. The integration structure will soon change for all countries, but the current one will continue to work. For now, it is only available for Brazil, Chile, Colombia, Mexico, Peru, and Uruguay.
+
+https://github.com/user-attachments/assets/b1ac8921-d3a1-4b72-9f5e-03e8d8343882
